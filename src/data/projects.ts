@@ -1,3 +1,5 @@
+import getImagePath from "../Utils/ImagePath/getImagePath";
+
 export interface Project {
   id: string;
   title: string;
@@ -23,7 +25,7 @@ const projects: Project[] = [
     client: "Private Client",
     category: "Residential",
     images: [
-      "/src/assets/images/about01-1x.png",
+      getImagePath("project01-01.png"),
       "/src/assets/images/project01-02.png",
       "/src/assets/images/project01-03.png",
     ],

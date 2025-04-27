@@ -1,3 +1,4 @@
+import getImagePath from "../../Utils/ImagePath/getImagePath";
 import styles from "./About.module.scss";
 
 const About = () => {
@@ -48,7 +49,7 @@ const About = () => {
           </div>
           <div className={styles.imageGrid}>
             <img
-              src="/src/assets/images/about01-1x.png"
+              src={getImagePath("about01-1x.png")}
               alt="Architectural design"
               className={styles.image}
             />
