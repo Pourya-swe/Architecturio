@@ -1,0 +1,72 @@
+@use "../../styles/main.scss" as *;
+
+.footer {
+  background-color: #1f2937;
+  color: $color-white;
+
+  .footerContainer {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .footerGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      color: #d1d5db;
+    }
+
+    .address {
+      color: #d1d5db;
+      font-style: normal;
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .socialLinks {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .socialLink {
+      color: #d1d5db;
+
+      &:hover {
+        color: white;
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #374151;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+  }
+
+  @include respond(phone) {
+    .footerContainer {
+      .footerGrid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

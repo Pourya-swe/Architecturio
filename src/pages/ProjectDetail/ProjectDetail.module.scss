@@ -1,0 +1,89 @@
+@use "../../styles/main.scss" as *;
+
+.projectDetailontainer {
+  padding: 64px 0;
+  background-color: $color-white;
+
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+
+    .backLink {
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      color: #2563eb;
+      text-decoration: none;
+
+      &:hover {
+        color: #1e40af;
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-right: 4px;
+      }
+    }
+
+    .contentGrid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+
+      .projectTitle {
+        font-size: 30px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 16px;
+      }
+
+      .detailsGrid {
+        margin-bottom: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        .detailItem {
+          .detailLabel {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+          }
+
+          .detailValue {
+            color: #111827;
+          }
+        }
+      }
+
+      .descriptionSection {
+        margin-bottom: 32px;
+
+        .descriptionTitle {
+          font-size: 20px;
+          font-weight: 700;
+          color: #111827;
+          margin-bottom: 8px;
+        }
+
+        .descriptionText {
+          color: #374151;
+        }
+      }
+
+      .contactButton {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    .wrapper {
+      .contentGrid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

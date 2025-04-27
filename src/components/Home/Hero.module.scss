@@ -1,0 +1,121 @@
+@use "../../styles/main.scss" as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  height: 100vh;
+
+  .backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+
+    .videoContent {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      );
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    max-width: 80rem;
+    padding: 0 2rem;
+    text-align: center;
+    color: $color-white;
+    line-height: 1.2;
+
+    .title {
+      font-size: 3.8rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.7rem;
+      font-weight: 500;
+      max-width: 55rem;
+    }
+
+    .ctaContainer {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $color-white;
+
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+
+      .primaryCta {
+        display: flex;
+        align-items: center;
+        background-color: $color-tertiary-dark;
+        padding: inherit;
+        border-radius: inherit;
+        height: 3.7rem;
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: $color-tertiary-light;
+          color: $color-grey-light-2;
+        }
+      }
+
+      .secondaryCta {
+        background-color: transparent;
+        padding: inherit;
+        border-radius: inherit;
+        border: 2px solid $color-white;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-balck;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .content {
+      padding: 0 2.5rem;
+      .title {
+        font-size: 2.8rem;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+      }
+      .ctaContainer {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

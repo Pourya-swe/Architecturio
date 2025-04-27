@@ -1,0 +1,71 @@
+@use "../../styles/main.scss" as *;
+
+.section {
+  padding: 4rem 0;
+  background-color: $color-white;
+
+  .servicesContainer {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1.125rem;
+      color: #374151;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .servicesGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      .serviceCard {
+        background-color: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+
+        .icon {
+          height: 2.5rem;
+          width: 2.5rem;
+          color: $color-tertiary-dark;
+          margin-bottom: 0.5rem;
+        }
+
+        .serviceTitle {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #111827;
+          margin-bottom: 0.5rem;
+        }
+
+        .serviceDescription {
+          color: #374151;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .servicesContainer {
+      .servicesGrid {
+        padding: 0 2rem;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.cardContainer {
+  height: 100%;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .imageContainer {
+    position: relative;
+  }
+
+  .image {
+    height: 16rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featuredBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .metadata {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    color: #374151;
+  }
+}

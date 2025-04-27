@@ -1,0 +1,93 @@
+@use "../../styles/main.scss" as *;
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: $color-white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .infoList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem;
+
+    .infoItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+      .content {
+        margin-top: 0.4rem;
+      }
+
+      .label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $color-balck;
+      }
+
+      .text {
+        margin-top: 0.25rem;
+        color: #374151;
+      }
+
+      .link {
+        color: $color-tertiary-dark;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .socialSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    .socialTitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+
+    .socialLinks {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .socialLink {
+      color: #4b5563;
+
+      &:hover {
+        color: #2563eb;
+      }
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+    height: 2rem;
+    width: 2rem;
+    color: $color-tertiary-dark;
+  }
+}
