@@ -48,7 +48,7 @@ const About = () => {
           </div>
           <div className={styles.imageGrid}>
             <img
-              src="/src/assets/images/about01-1x.png"
+              src="../../assets/images/about01-1x.png"
               alt="Architectural design"
               className={styles.image}
             />
