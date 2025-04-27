@@ -1,14 +1,15 @@
 import { Link } from "react-router";
 import styles from "./Hero.module.scss";
 import { ClassList } from "../../Utils/Class-List/ClassList";
+import getProductionPath from "../../Utils/Production-Path/getProductionPath";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={ClassList(styles.backgroundVideo)}>
         <video className={ClassList(styles.videoContent)} autoPlay muted loop>
-          <source src="/src/assets/videos/video.mp4" type="video/mp4" />
-          <source src="/src/assets/videos/video.webm" type="video/webm" />
+          <source src={getProductionPath("video.mp4")} type="video/mp4" />
+          <source src={getProductionPath("video.webm")} type="video/webm" />
           You browser is not supported!
         </video>
         <div className={styles.overlay}></div>

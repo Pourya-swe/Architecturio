@@ -1,4 +1,4 @@
-import getImagePath from "../Utils/ImagePath/getImagePath";
+import getProductionPath from "../Utils/Production-Path/getProductionPath";
 
 export interface Project {
   id: string;
@@ -25,9 +25,9 @@ const projects: Project[] = [
     client: "Private Client",
     category: "Residential",
     images: [
-      getImagePath("project01-01.png"),
-      "/src/assets/images/project01-02.png",
-      "/src/assets/images/project01-03.png",
+      getProductionPath("about01-1x.png"),
+      getProductionPath("project01-02.png"),
+      getProductionPath("project01-03.png"),
     ],
     featured: true,
   },
@@ -42,9 +42,9 @@ const projects: Project[] = [
     client: "Metropolis Development Corp",
     category: "Commercial",
     images: [
-      "/src/assets/images/about02-1x.png",
-      "/src/assets/images/project02-02.png",
-      "/src/assets/images/project02-03.png",
+      getProductionPath("about02-1x.png"),
+      getProductionPath("project02-02.png"),
+      getProductionPath("project02-03.png"),
     ],
     featured: true,
   },
@@ -60,8 +60,8 @@ const projects: Project[] = [
     client: "Portland Arts Foundation",
     category: "Cultural",
     images: [
-      "/src/assets/images/project05-01.png",
-      "/src/assets/images/project05-02.png",
+      getProductionPath("project05-01.png"),
+      getProductionPath("project05-02.png"),
     ],
     featured: false,
   },
@@ -77,9 +77,9 @@ const projects: Project[] = [
     client: "Harmony Resorts International",
     category: "Hospitality",
     images: [
-      "/src/assets/images/project06-01.png",
-      "/src/assets/images/project06-02.png",
-      "/src/assets/images/project06-03.png",
+      getProductionPath("project06-01.png"),
+      getProductionPath("project06-02.png"),
+      getProductionPath("project06-03.png"),
     ],
     featured: true,
   },
@@ -95,9 +95,9 @@ const projects: Project[] = [
     client: "Detroit Revitalization Authority",
     category: "Urban Planning",
     images: [
-      "/src/assets/images/project07-01.png",
-      "/src/assets/images/project07-02.png",
-      "/src/assets/images/project07-03.png",
+      getProductionPath("project07-01.png"),
+      getProductionPath("project07-02.png"),
+      getProductionPath("project07-03.png"),
     ],
     featured: false,
   },
@@ -113,9 +113,9 @@ const projects: Project[] = [
     client: "Private Client",
     category: "Residential",
     images: [
-      "/src/assets/images/project08-01.png",
-      "/src/assets/images/project08-02.png",
-      "/src/assets/images/project08-03.png",
+      getProductionPath("project08-01.png"),
+      getProductionPath("project08-02.png"),
+      getProductionPath("project08-03.png"),
     ],
     featured: false,
   },

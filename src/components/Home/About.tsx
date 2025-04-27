@@ -1,4 +1,4 @@
-import getImagePath from "../../Utils/ImagePath/getImagePath";
+import getProductionPath from "../../Utils/Production-Path/getProductionPath";
 import styles from "./About.module.scss";
 
 const About = () => {
@@ -49,22 +49,22 @@ const About = () => {
           </div>
           <div className={styles.imageGrid}>
             <img
-              src={getImagePath("about01-1x.png")}
+              src={getProductionPath("about01-1x.png")}
               alt="Architectural design"
               className={styles.image}
             />
             <img
-              src="/src/assets/images/about02-1x.png"
+              src={getProductionPath("about02-1x.png")}
               alt="Urban architecture"
               className={styles.image}
             />
             <img
-              src="/src/assets/images/about03-1x.png"
+              src={getProductionPath("about03-1x.png")}
               alt="Mountain retreat"
               className={styles.image}
             />
             <img
-              src="/src/assets/images/about04-1x.png"
+              src={getProductionPath("about04-1x.png")}
               alt="Cultural center"
               className={styles.image}
             />
