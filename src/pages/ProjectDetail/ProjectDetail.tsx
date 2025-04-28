@@ -2,14 +2,28 @@ import { Link, useNavigate, useParams } from "react-router";
 import Button from "../../components/UI/Button";
 import { useEffect } from "react";
 import projects from "../../data/projects";
-import ImageCarousel from "../../components/UI/ImageCarousel";
 import styles from "./ProjectDetail.module.scss";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { ClassList } from "../../Utils/Class-List/ClassList";
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    fade: true,
+  };
 
   const project = projects.find((p) => p.id === projectId);
 
@@ -34,8 +48,16 @@ const ProjectDetail = () => {
         </div>
 
         <div className={styles.contentGrid}>
-          <div>
-            <ImageCarousel images={project.images} alt={project.title} />
+          <div className={styles.imageContainer}>
+            <Slider {...sliderSettings}>
+              {project.images.map((image, index) => (
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className={ClassList(styles.image)}
+                />
+              ))}
+            </Slider>
           </div>
 
           <div>

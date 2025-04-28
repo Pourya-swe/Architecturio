@@ -6,11 +6,6 @@
   font-weight: 500;
   transition: all 0.2s;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px currentColor;
-  }
-
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -19,29 +14,21 @@
 
 .primary {
   @include button-base;
-  background-color: $color-primary;
+  background-color: $color-tertiary-dark;
   color: $color-white;
 
   &:hover:not(:disabled) {
-    background-color: $color-primary-dark;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary-light;
+    background-color: $color-tertiary-light;
   }
 }
 
 .secondary {
   @include button-base;
-  background-color: $color-secondary-light;
+  background-color: $color-primary-dark;
   color: $color-white;
 
   &:hover:not(:disabled) {
-    background-color: $color-secondary-dark;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-secondary-light;
+    background-color: $color-primary-light;
   }
 }
 
@@ -53,9 +40,5 @@
 
   &:hover:not(:disabled) {
     background-color: $color-grey-light-1;
-  }
-
-  &:focus {
-    box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-grey-dark;
   }
 }
