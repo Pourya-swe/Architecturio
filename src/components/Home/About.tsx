@@ -49,22 +49,22 @@ const About = () => {
           </div>
           <div className={styles.imageGrid}>
             <img
-              src={getProductionPath("about01-1x.png")}
+              src={getProductionPath("about01-1x.webp")}
               alt="Architectural design"
               className={styles.image}
             />
             <img
-              src={getProductionPath("about02-1x.png")}
+              src={getProductionPath("about02-1x.webp")}
               alt="Urban architecture"
               className={styles.image}
             />
             <img
-              src={getProductionPath("about03-1x.png")}
+              src={getProductionPath("about03-1x.webp")}
               alt="Mountain retreat"
               className={styles.image}
             />
             <img
-              src={getProductionPath("about04-1x.png")}
+              src={getProductionPath("about04-1x.webp")}
               alt="Cultural center"
               className={styles.image}
             />

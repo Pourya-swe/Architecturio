@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import AppLayout from "./components/AppLayout/AppLayout";
 import { lazy, Suspense } from "react";
 import Loading from "./components/Loading/Loading";
@@ -10,8 +10,10 @@ const Contact = lazy(() => import("./pages/Contact/Contact"));
 const NotFound = lazy(() => import("./components/NotFound-404/NotFound"));
 
 const AppRouter = () => {
+  const location = useLocation();
+
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />} key={location.pathname}>
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />

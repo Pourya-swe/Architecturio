@@ -8,8 +8,8 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={ClassList(styles.backgroundVideo)}>
         <video className={ClassList(styles.videoContent)} autoPlay muted loop>
-          <source src={getProductionPath("video.mp4")} type="video/mp4" />
-          <source src={getProductionPath("video.webm")} type="video/webm" />
+          <source src={getProductionPath("video-c.mp4")} type="video/mp4" />
+          <source src={getProductionPath("video-c.webm")} type="video/webm" />
           You browser is not supported!
         </video>
         <div className={styles.overlay}></div>
