@@ -45,17 +45,20 @@
         }
 
         :global(.slick-arrow::before) {
+          display: none;
           font-size: 3.2rem;
           opacity: 0.8;
           color: $color-grey-dark;
         }
 
         :global(.slick-next) {
+          display: none;
           right: 2rem;
           top: 26rem;
         }
 
         :global(.slick-prev) {
+          display: none;
           left: 1.2rem;
           top: 26rem;
           z-index: 9;
